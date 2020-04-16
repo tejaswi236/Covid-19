@@ -23,7 +23,6 @@ public class PostService {
     }
 
     public Post save(Post post) {
-        // @TODO save the post to DB and return the saved post
         return repository.save(post);
     }
 
@@ -33,7 +32,6 @@ public class PostService {
     }
 
     public void deleteById(Long id) {
-        // @TODO delete the post by id
-        return;
+        repository.deleteById(id);
     }
 }
