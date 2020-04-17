@@ -5,6 +5,7 @@ import se.kth.sda.skeleton.comments.Comment;
 
 import javax.persistence.*;
 
+import se.kth.sda.skeleton.comments.Comment;
 
 // @TODO add Hibernate annotations to define which table and columns should be used to save the Post Object.
 
