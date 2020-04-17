@@ -1,12 +1,19 @@
 package se.kth.sda.skeleton.posts;
+import se.kth.sda.skeleton.comments.Comment;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import javax.persistence.*;
 
 import java.util.List;
 import java.util.Optional;
 
-/*
-    @TODO Autowire the PostRepository and use it to implement all the service methods.
- */
+
+@Service
 public class PostService {
+
+    @Autowired
+    public PostRepository repository;
     public List<Post> getAll() {
         // @TODO get all posts and return them as List<Post>
         return null;
@@ -19,7 +26,7 @@ public class PostService {
 
     public Post save(Post post) {
         // @TODO save the post to DB and return the saved post
-        return null;
+        return repository.save(post);
     }
 
     public Optional<Post> update(Post post) {
