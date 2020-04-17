@@ -14,9 +14,9 @@ public class PostService {
 
     @Autowired
     public PostRepository repository;
+
     public List<Post> getAll() {
-        // @TODO get all posts and return them as List<Post>
-        return null;
+        return repository.findAll();
     }
 
     public Optional<Post> getByID(Long id) {
@@ -36,4 +36,6 @@ public class PostService {
     public void deleteById(Long id) {
         repository.deleteById(id);
     }
+
+
 }
