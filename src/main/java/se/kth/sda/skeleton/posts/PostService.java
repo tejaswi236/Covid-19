@@ -14,9 +14,9 @@ public class PostService {
 
     @Autowired
     public PostRepository repository;
+
     public List<Post> getAll() {
-        // @TODO get all posts and return them as List<Post>
-        return null;
+        return repository.findAll();
     }
 
     public Optional<Post> getByID(Long id) {
@@ -25,7 +25,6 @@ public class PostService {
     }
 
     public Post save(Post post) {
-        // @TODO save the post to DB and return the saved post
         return repository.save(post);
     }
 
@@ -35,7 +34,8 @@ public class PostService {
     }
 
     public void deleteById(Long id) {
-        // @TODO delete the post by id
-        return;
+        repository.deleteById(id);
     }
+
+
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import CommentForm from '../comments/CommentForm';
 
 function PostCard({post, onDeleteClick}) {
     return (
@@ -9,7 +10,11 @@ function PostCard({post, onDeleteClick}) {
                 </p>
 
                 <button className="btn btn-danger" onClick={onDeleteClick}>Delete</button>
+                <div className="comment-body">
+                    <CommentForm />
+                </div>
             </div>
+            
         </div>
     );
 }
