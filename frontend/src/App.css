@@ -1,6 +1,8 @@
 body {
   min-height: 100vh;
-  background: linear-gradient(to right, #2c3e50, #3498db);
+  background: linear-gradient(to right, #3498db);
+  background-size: auto;
+  background-image: url("./Coronavirus.jpg");
 }
 
 .App {

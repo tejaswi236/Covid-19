@@ -24,10 +24,13 @@ class LoginPage extends Component {
                 <div className="container">
                     <div className="row mt-4">
                         <div className="col-md-6 " style={{color: "white"}}>
-                            <h1>SDA</h1>
-                            <p>Starter template</p>
-                        </div>
+                        <img src={require("./coronavirus.gif")} alt="covid" width="100" />
+                        <p> “Better to wear a mask than a ventilator;  </p>
+                         <p>    better to stay at home than in an ICU.” </p>
 
+                         
+                        </div>
+                                              
                         <div className="col-md-6">
                             <div className="row">
                                 <div className="col-12  strong-shadow">
