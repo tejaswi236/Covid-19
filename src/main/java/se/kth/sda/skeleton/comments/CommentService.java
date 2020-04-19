@@ -3,6 +3,8 @@ package se.kth.sda.skeleton.comments;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class CommentService {
     @Autowired
@@ -15,5 +17,10 @@ public class CommentService {
 
     public void deleteById(Long id) { commentRepository.deleteById(id);
     }
+
+    public Iterable<Comment> getAll() {
+        return commentRepository.findAll();
+    }
+
 
 }

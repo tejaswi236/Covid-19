@@ -2,6 +2,9 @@ package se.kth.sda.skeleton.comments;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import se.kth.sda.skeleton.posts.Post;
+
+import java.util.List;
 
 
 @RestController
@@ -17,4 +20,5 @@ public class CommentController {
     public void delete(@PathVariable Long id){
         commentService.deleteById(id);
     }
+
 }
