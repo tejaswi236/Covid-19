@@ -5,6 +5,9 @@ class CommentsApi {
     createComment(comment) {
         return Api.post('/comments', comment);
     }
+    deleteComment(id) {
+        return Api.delete('/comments/'+id);
+    }
 
 }
 

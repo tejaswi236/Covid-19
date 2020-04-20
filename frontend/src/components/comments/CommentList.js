@@ -29,13 +29,26 @@ class CommentList extends Component{
         }
     }
 
+    async deleteComment(comment) {
+        try {
+            await CommentsApi.deleteComment(comment.id);
+            const newComments = this.state.comments.filter(c => c.id !== comment.id);
+            this.setState({
+                comments: newComments,
+            });
+        } catch (e) {
+            console.error(e);
+        }
+    }
+
     render(){
         const comments = this.state.comments;
         return(
             <div>
                 <CommentForm onSubmit={(commentData) =>  this.createComment(commentData)  }/>
                 {comments.map(comment => 
-                    <Comment key={comment.id} comment={comment} />
+                    <Comment key={comment.id} comment={comment} onDeleteClick={() => this.deleteComment(comment)}/>
+
                     )}
         </div>
 
