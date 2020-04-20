@@ -21,4 +21,9 @@ public class CommentController {
         commentService.deleteById(id);
     }
 
+    @GetMapping("/comments")
+    public List<Comment> getAll(@RequestParam Long postId){
+        return commentService.getAllByPostId(postId);
+    }
+
 }
