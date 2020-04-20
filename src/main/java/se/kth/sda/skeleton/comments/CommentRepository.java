@@ -7,8 +7,7 @@ import java.util.List;
 
 @Repository
 public interface CommentRepository extends CrudRepository<Comment, Long> {
-    default List<Comment> findAllByProjectId(Long projectId) {
+    default List<Comment> findAllByPostId(Long postId) {
         return null;
     }
 }
-
