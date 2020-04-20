@@ -9,6 +9,10 @@ class CommentsApi {
         return Api.delete('/comments/'+id);
     }
 
+    getAllComments(postId) {
+            return Api.get('/comments/',postId);
+        }
+
 }
 
 export default new CommentsApi();
