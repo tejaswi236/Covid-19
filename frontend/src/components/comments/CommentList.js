@@ -44,9 +44,13 @@ class CommentList extends Component{
     }
 
     componentDidMount() {
-        CommentsApi.getAllComments(this.props.postId)
-            .then(({data}) => this.setState({comments: data}))
-            .catch(err => console.error(err));
+        const postId = this.props.post.id;
+        CommentsApi.getAllCommentsByPostId(postId)
+            .then(({data}) => {
+                console.log(data);
+                this.setState({comments: data})
+            })
+            .catch(err => console.error(err.response.data));
     }
 
     render(){

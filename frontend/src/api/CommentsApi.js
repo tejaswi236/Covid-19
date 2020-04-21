@@ -9,8 +9,9 @@ class CommentsApi {
         return Api.delete('/comments/'+id);
     }
 
-    getAllComments(postId) {
-            return Api.get('/comments/',postId);
+    getAllCommentsByPostId(id) {
+            const params = {postId : id}
+            return Api.get('/comments', {params});
         }
 
 }
