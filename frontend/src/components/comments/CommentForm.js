@@ -28,7 +28,7 @@ function CommentForm({onSubmit}) {
 
                     <div className="form-group">
                         <button 
-                            className="btn btn-primary" 
+                            className="btn btn-primary btn-sm" 
                             onClick={handleSubmit}>
                             Comment
                         </button>

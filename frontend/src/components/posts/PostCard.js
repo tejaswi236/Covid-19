@@ -9,7 +9,7 @@ function PostCard({post, onDeleteClick}) {
                     {post.body}
                 </p>
 
-                <button className="btn btn-danger" onClick={onDeleteClick}>Delete</button>
+                <button className="btn btn-danger btn-sm mb-2" onClick={onDeleteClick}>Delete</button>
                 <div className="comment-body">
                     <CommentList post={post}/>
                 </div>
