@@ -8,7 +8,7 @@ function Comment({comment, onDeleteClick}) {
                     {comment.body}
 
                 </p>
-                <button className="btn btn-danger" onClick={onDeleteClick}>Delete comment</button>
+                <button className="btn btn-danger btn-sm" onClick={onDeleteClick}>Delete comment</button>
             </div>
 
         </div>

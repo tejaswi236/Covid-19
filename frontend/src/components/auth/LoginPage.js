@@ -25,8 +25,8 @@ class LoginPage extends Component {
                     <div className="row mt-4">
                         <div className="col-md-6 " style={{color: "white"}}>
                         <img src={require("./coronavirus.gif")} alt="covid" width="100" />
-                        <p> “Better to wear a mask than a ventilator;  </p>
-                         <p>    better to stay at home than in an ICU.” </p>
+                        <p className="blockquote text-left"> “Better to wear a mask than a ventilator;  </p>
+                         <p class="blockquote text-left">    better to stay at home than in an ICU.” </p>
 
                          
                         </div>
