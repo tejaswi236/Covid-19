@@ -22,7 +22,7 @@ public class CommentController {
     }
 
     @GetMapping("/comments")
-    public List<Comment> getAll(@RequestParam Long postId){
+    public List<Comment> getAll(@RequestParam("postId") Long postId){
         return commentService.getAllByPostId(postId);
     }
 

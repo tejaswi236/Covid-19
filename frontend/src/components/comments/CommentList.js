@@ -17,7 +17,8 @@ class CommentList extends Component{
 
     async createComment(commentData) {
         try {
-            const response = await CommentsApi.createComment(commentData);
+            const post = {id:this.props.post.id, body:this.props.post.body}
+            const response = await CommentsApi.createComment({body:commentData.body,post});
             const comment = response.data;
             const newComments = this.state.comments.concat(comment);
 
@@ -43,9 +44,13 @@ class CommentList extends Component{
     }
 
     componentDidMount() {
-        CommentsApi.getAllComments(this.props.postId)
-            .then(({data}) => this.setState({comments: data}))
-            .catch(err => console.error(err));
+        const postId = this.props.post.id;
+        CommentsApi.getAllCommentsByPostId(postId)
+            .then(({data}) => {
+                console.log(data);
+                this.setState({comments: data})
+            })
+            .catch(err => console.error(err.response.data));
     }
 
     render(){
