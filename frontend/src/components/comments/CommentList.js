@@ -18,7 +18,7 @@ class CommentList extends Component{
     async createComment(commentData) {
         try {
             const post = {id:this.props.post.id, body:this.props.post.body}
-            const response = await CommentsApi.createComment({body:commentData.body,post});
+            const response = await CommentsApi.createComment({body:commentData.body, post});
             const comment = response.data;
             const newComments = this.state.comments.concat(comment);
 
